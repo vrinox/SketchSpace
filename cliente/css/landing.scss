@@ -44,6 +44,7 @@ md-content[landing]{
         margin-right: 20px;
         background-color: white;
         z-index: 5;
+        cursor: pointer;
         div[tooltip]{
           margin-top: -15px;
           font-size: 12px;
@@ -95,9 +96,9 @@ md-content[landing]{
     }
     section{
       position: absolute;
-        top: 450px;
-        left: calc(50% - 100px);
-        width: 200px;
+      top: 450px;
+      left: calc(50% - 132px);
+      width: auto;
     }
   }
 }

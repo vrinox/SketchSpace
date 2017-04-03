@@ -41,7 +41,8 @@ md-content[landing] {
         float: right;
         margin-right: 20px;
         background-color: white;
-        z-index: 5; }
+        z-index: 5;
+        cursor: pointer; }
         md-content[landing] header div[sociales] i div[tooltip] {
           margin-top: -15px;
           font-size: 12px;
@@ -83,7 +84,7 @@ md-content[landing] {
   md-content[landing] div[logo] section {
     position: absolute;
     top: 450px;
-    left: calc(50% - 100px);
-    width: 200px; }
+    left: calc(50% - 132px);
+    width: auto; }
 
 /*# sourceMappingURL=landing.css.map */
