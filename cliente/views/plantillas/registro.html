@@ -30,23 +30,24 @@
 
   <md-input-container md-no-float class="md-block">
     <label>nombre</label>
-    <input ng-model="user.nombre">
+    <input ng-model="nombre">
   </md-input-container>
   <md-input-container md-no-float class="md-block">
     <label>apellido</label>
-    <input ng-model="user.apellido">
+    <input ng-model="apellido">
   </md-input-container>
   <md-input-container md-no-float class="md-block">
     <label>correo</label>
-    <input ng-model="user.correo">
+    <input ng-model="correo">
   </md-input-container>
   <md-input-container md-no-float class="md-block">
     <label>sexo</label>
-    <input ng-model="user.sexo">
+    <input ng-model="sexo">
   </md-input-container>
   <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
     <md-button class="md-raised md-primary">Enviar</md-button>
     <md-button class="md-raised md-primary" onclick="location.href='#registro'">Volver</md-button>
   </section>
 </div>
+<div texto>{{ 'señor ' + nombre + ' ' + apellido }}</div>
 </md-content>
