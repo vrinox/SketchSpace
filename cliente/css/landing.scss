@@ -1,8 +1,17 @@
-$color-primary:rgb(63,81,181);
+@import "mixins.scss";
+//$color-primary:rgb(63,81,181);
+$color-primary:#00a19a;
+
 html,body{
   min-height: 100%;
 }
 md-content[landing]{
+  .md-primary{
+    background: $color-primary;
+    &.md-raised{
+      background-color: $color-primary;
+    }
+  }
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -99,6 +108,25 @@ md-content[landing]{
       top: 450px;
       left: calc(50% - 132px);
       width: auto;
+    }
+  }
+  div[registro]{
+    position: absolute;
+    top: 150px;
+    background-color: white;
+    @include BoxShadowHelper(3);
+    width: 400px ;
+    left: 8%;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    div[cabecera]{
+      background-color: $color-primary;
+      width: 100%;
+      padding: 20px 0px 20px 40px;
+      color: white;
+      font-size: 20px;
+      margin: -10px 0px 20px -10px;
     }
   }
 }

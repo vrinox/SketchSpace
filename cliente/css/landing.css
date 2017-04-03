@@ -6,6 +6,10 @@ md-content[landing] {
   width: 100%;
   height: 100%;
   position: relative; }
+  md-content[landing] .md-primary {
+    background: #00a19a; }
+    md-content[landing] .md-primary.md-raised {
+      background-color: #00a19a; }
   md-content[landing] img {
     width: 100%;
     height: 100%; }
@@ -30,7 +34,7 @@ md-content[landing] {
       position: relative;
       top: 20%; }
       md-content[landing] header div[sociales] i {
-        color: #3f51b5;
+        color: #00a19a;
         border: 1px solid;
         width: 40px;
         height: 35px;
@@ -71,10 +75,10 @@ md-content[landing] {
           padding: 6px;
           border-radius: 3px;
           margin-top: 10px;
-          background-color: #3f51b5;
+          background-color: #00a19a;
           position: absolute; }
           md-content[landing] header div[sociales] i:hover div[tooltip]:after {
-            border-bottom: 10px solid #3f51b5; }
+            border-bottom: 10px solid #00a19a; }
   md-content[landing] div[logo] img {
     width: 600px;
     height: 450px;
@@ -86,5 +90,22 @@ md-content[landing] {
     top: 450px;
     left: calc(50% - 132px);
     width: auto; }
+  md-content[landing] div[registro] {
+    position: absolute;
+    top: 150px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 400px;
+    left: 8%;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden; }
+    md-content[landing] div[registro] div[cabecera] {
+      background-color: #00a19a;
+      width: 100%;
+      padding: 20px 0px 20px 40px;
+      color: white;
+      font-size: 20px;
+      margin: -10px 0px 20px -10px; }
 
 /*# sourceMappingURL=landing.css.map */

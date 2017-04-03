@@ -1,0 +1,52 @@
+<md-content landing>
+  <header>
+    <div titulo>
+      Sketch
+    </div>
+    <div sociales>
+        <i class="ion-social-instagram ">
+          <div tooltip>
+              Instagram
+          </div>
+        </i>
+        <i class="ion-social-twitter ">
+          <div tooltip>
+              Twitter
+          </div>
+        </i>
+        <i class="ion-social-facebook ">
+          <div tooltip>
+              Facebook
+          </div>
+        </i>
+    </div>
+  </header>
+<img src="/img/3.jpg">
+
+<div layout-padding registro layout="column" layout-sm="column"  layout-wrap>
+  <div cabecera>
+    Registro
+  </div>
+
+  <md-input-container md-no-float class="md-block">
+    <label>nombre</label>
+    <input ng-model="user.nombre">
+  </md-input-container>
+  <md-input-container md-no-float class="md-block">
+    <label>apellido</label>
+    <input ng-model="user.apellido">
+  </md-input-container>
+  <md-input-container md-no-float class="md-block">
+    <label>correo</label>
+    <input ng-model="user.correo">
+  </md-input-container>
+  <md-input-container md-no-float class="md-block">
+    <label>sexo</label>
+    <input ng-model="user.sexo">
+  </md-input-container>
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button class="md-raised md-primary">Enviar</md-button>
+    <md-button class="md-raised md-primary" onclick="location.href='#registro'">Volver</md-button>
+  </section>
+</div>
+</md-content>
