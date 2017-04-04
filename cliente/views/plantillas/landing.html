@@ -1,32 +1,9 @@
 <md-content landing>
-  <header>
-    <div titulo>
-      Sketch
-    </div>
-    <div sociales>
-        <i class="ion-social-instagram ">
-          <div tooltip>
-              Instagram
-          </div>
-        </i>
-        <i class="ion-social-twitter ">
-          <div tooltip>
-              Twitter
-          </div>
-        </i>
-        <i class="ion-social-facebook ">
-          <div tooltip>
-              Facebook
-          </div>
-        </i>
-    </div>
-  </header>
-<img src="/img/3.jpg">
+  <div ng-include="'/views/plantillas/frontPageMain.html'"></div>
 
 <div logo>
   <img src="/img/Sketch.png">
   <section layout="column" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button class="md-raised md-primary">Iniciar Sesion</md-button>
       <md-button class="md-raised md-primary" onclick="location.href='#registro'">No posees Cuenta? Registrate</md-button>
     </section>
 </div>

@@ -1,53 +1,31 @@
 <md-content landing>
-  <header>
-    <div titulo>
-      Sketch
-    </div>
-    <div sociales>
-        <i class="ion-social-instagram ">
-          <div tooltip>
-              Instagram
-          </div>
-        </i>
-        <i class="ion-social-twitter ">
-          <div tooltip>
-              Twitter
-          </div>
-        </i>
-        <i class="ion-social-facebook ">
-          <div tooltip>
-              Facebook
-          </div>
-        </i>
-    </div>
-  </header>
-<img src="/img/3.jpg">
-
+<div ng-include="'/views/plantillas/frontPageMain.html'"></div>
 <div layout-padding registro layout="column" layout-sm="column"  layout-wrap>
-  <div cabecera>
+  <div cabecera class="md-primary">
     Registro
   </div>
 
   <md-input-container md-no-float class="md-block">
-    <label>nombre</label>
+    <label>Nombre</label>
     <input ng-model="nombre">
   </md-input-container>
   <md-input-container md-no-float class="md-block">
-    <label>apellido</label>
+    <label>Apellido</label>
     <input ng-model="apellido">
   </md-input-container>
   <md-input-container md-no-float class="md-block">
-    <label>correo</label>
+    <label>Correo</label>
     <input ng-model="correo">
   </md-input-container>
-  <md-input-container md-no-float class="md-block">
-    <label>sexo</label>
-    <input ng-model="sexo">
-  </md-input-container>
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+  <md-radio-group ng-model="sexo" layout="row">
+
+      <md-radio-button value="M" >Hombre</md-radio-button>
+      <md-radio-button value="F">Mujer</md-radio-button>
+
+    </md-radio-group>
+  <section layout="row"  layout-align="center" >
     <md-button class="md-raised md-primary">Enviar</md-button>
     <md-button class="md-raised md-primary" onclick="location.href='#registro'">Volver</md-button>
   </section>
 </div>
-<div texto>{{ 'señor ' + nombre + ' ' + apellido }}</div>
 </md-content>

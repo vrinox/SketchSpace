@@ -2,17 +2,16 @@ html, body {
   min-height: 100%; }
 
 md-content[landing] {
+  background: url("../img/3.jpg") no-repeat;
+  background-size: cover;
   overflow: hidden;
   width: 100%;
   height: 100%;
   position: relative; }
   md-content[landing] .md-primary {
-    background: #00a19a; }
+    background: #009BDB; }
     md-content[landing] .md-primary.md-raised {
-      background-color: #00a19a; }
-  md-content[landing] img {
-    width: 100%;
-    height: 100%; }
+      background-color: #607D8B; }
   md-content[landing] header {
     width: 100%;
     height: 60px;
@@ -29,12 +28,20 @@ md-content[landing] {
       float: left; }
     md-content[landing] header div[sociales] {
       float: right;
-      width: 20%;
+      width: 340px;
       height: 50%;
       position: relative;
       top: 20%; }
+      md-content[landing] header div[sociales] .md-raised {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        color: white;
+        border: 1px solid !important;
+        box-shadow: none;
+        top: -3px; }
+        md-content[landing] header div[sociales] .md-raised:hover span {
+          color: white; }
       md-content[landing] header div[sociales] i {
-        color: #00a19a;
+        color: white;
         border: 1px solid;
         width: 40px;
         height: 35px;
@@ -44,7 +51,7 @@ md-content[landing] {
         font-size: 30px;
         float: right;
         margin-right: 20px;
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.3);
         z-index: 5;
         cursor: pointer; }
         md-content[landing] header div[sociales] i div[tooltip] {
@@ -75,25 +82,25 @@ md-content[landing] {
           padding: 6px;
           border-radius: 3px;
           margin-top: 10px;
-          background-color: #00a19a;
+          background-color: #009BDB;
           position: absolute; }
           md-content[landing] header div[sociales] i:hover div[tooltip]:after {
-            border-bottom: 10px solid #00a19a; }
+            border-bottom: 10px solid #009BDB; }
   md-content[landing] div[logo] img {
-    width: 600px;
+    width: 700px;
     height: 450px;
     position: absolute;
-    top: 150px;
-    left: calc(50% - 300px); }
+    top: 200px;
+    left: calc(50% - 350px); }
   md-content[landing] div[logo] section {
     position: absolute;
-    top: 450px;
+    top: 600px;
     left: calc(50% - 132px);
     width: auto; }
   md-content[landing] div[registro] {
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 150px;
-    background-color: white;
+    top: 100px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     width: 400px;
     left: 8%;
@@ -101,9 +108,10 @@ md-content[landing] {
     border-radius: 3px;
     overflow: hidden; }
     md-content[landing] div[registro] div[cabecera] {
-      background-color: #00a19a;
+      background-color: rgba(0, 155, 219, 0.6);
+      text-align: center;
       width: 100%;
-      padding: 20px 0px 20px 40px;
+      padding: 20px 0px 20px 18px;
       color: white;
       font-size: 20px;
       margin: -10px 0px 20px -10px; }
