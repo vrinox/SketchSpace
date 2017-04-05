@@ -1,5 +1,28 @@
+
 <md-content landing>
-<div ng-include="'/views/plantillas/frontPageMain.html'"></div>
+  <header>
+    <div titulo>
+      Sketch
+    </div>
+    <div sociales>
+        <i class="ion-social-instagram ">
+          <div tooltip>
+              Instagram
+          </div>
+        </i>
+        <i class="ion-social-twitter " ui-sref="trabajos">
+          <div tooltip>
+              Twitter
+          </div>
+        </i>
+        <i class="ion-social-facebook ">
+          <div tooltip>
+              Facebook
+          </div>
+        </i>
+        <md-button class="md-raised md-primary" ui-sref="frontPage.inicio">Iniciar Sesion</md-button>
+    </div>
+  </header>
   <div titulo-trabajo>
     <h4>Trabajos</h4>
   </div>
@@ -15,9 +38,7 @@
           <br>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
         </p>
-        <md-button class="md-raised md-fab md-mini" aria-label="Eat cake">
-            <md-icon class=""> save</md-icon>
-        </md-button>
+          <md-button class="md-raised md-primary">Aceptar</md-button>
         <div clear></div>
       </div>
 

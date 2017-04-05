@@ -142,6 +142,8 @@ md-content[landing] {
     top: 600px;
     left: calc(50% - 132px);
     width: auto; }
+    md-content[landing] div[logo] section .md-raised {
+      color: white; }
   md-content[landing] div[registro] {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -151,7 +153,22 @@ md-content[landing] {
     left: 8%;
     padding-bottom: 10px;
     border-radius: 3px;
-    overflow: hidden; }
+    overflow: hidden;
+    border: 1px solid silver; }
+    md-content[landing] div[registro] .md-raised {
+      color: white; }
+    md-content[landing] div[registro].inicio {
+      position: relative;
+      margin: 0 auto;
+      left: 0px;
+      top: 150px; }
+      md-content[landing] div[registro].inicio div[cabecera] {
+        margin-bottom: 33px;
+        padding-top: 50px;
+        height: 60px;
+        font-size: 30px;
+        text-transform: uppercase;
+        border-bottom: 1px solid silver; }
     md-content[landing] div[registro] div[cabecera] {
       background-color: rgba(0, 155, 219, 0.6);
       text-align: center;

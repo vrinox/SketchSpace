@@ -121,6 +121,9 @@ md-content[landing]{
       top: 600px;
       left: calc(50% - 132px);
       width: auto;
+      .md-raised{
+        color: white;
+      }
     }
   }
   div[registro]{
@@ -133,6 +136,24 @@ md-content[landing]{
     padding-bottom: 10px;
     border-radius: 3px;
     overflow: hidden;
+    border:1px solid silver;
+    .md-raised{
+      color: white;
+    }
+    &.inicio{
+      position: relative;
+      margin: 0 auto;
+      left: 0px;
+      top: 150px;
+      div[cabecera]{
+        margin-bottom: 33px;
+        padding-top: 50px;
+        height: 60px;
+        font-size: 30px;
+        text-transform: uppercase;
+        border-bottom: 1px solid silver;
+      }
+    }
     div[cabecera]{
       background-color: rgba(0,155,219,0.6);
       text-align: center;
