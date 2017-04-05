@@ -2,7 +2,7 @@
   <div cabecera class="md-primary">
     Inicio Sesion
   </div>
-  <form name="formInicio">
+  <form name="formInicio" ng-submit="login.login()">
     <md-input-container md-no-float class="md-block">
       <label>Nombre o Email</label>
       <input required name="nombre" minlength="5"  ng-model="nombre">
@@ -20,7 +20,7 @@
       </div>
     </md-input-container>
     <section layout="row"  layout-align="center" >
-      <md-button class="md-raised md-primary">Iniciar sesion</md-button>
+      <md-button class="md-raised md-primary" type="submit">Iniciar sesion</md-button>
       <md-button class="md-raised md-primary" ui-sref="frontPage.main">Volver</md-button>
     </section>
   </form>

@@ -1,4 +1,4 @@
-angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.router'])
+angular.module('sketch', ["satellizer",'ngMaterial','ngMessages','ngRoute', 'ngResource','ui.router'])
 .config(['$stateProvider','$urlRouterProvider','$mdThemingProvider', function ($stateProvider,$urlRouterProvider,$mdThemingProvider) {
   //$urlRouterProvider.otherwise('/');
   $stateProvider
@@ -32,4 +32,30 @@ angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.
           .primaryPalette('cyan')
           .accentPalette('blue-grey')
           .dark();
-}]);
+}])
+//----------------------- Autenticacion ------------------------
+.config(['$authProvider',function($authProvider){
+  // Parametros de configuración
+        $authProvider.loginUrl = "/api/autenticar";
+        $authProvider.signupUrl = "/api/registrar";
+        $authProvider.tokenName = "token";
+        $authProvider.tokenPrefix = "SketchSpace";
+}])
+.config(['$httpProvider', 'satellizer.config', function($httpProvider, config) {
+      $httpProvider.interceptors.push(['$q', function($q) {
+        var tokenName = config.tokenPrefix ? config.tokenPrefix + '_' + config.tokenName : config.tokenName;
+        return {
+          request: function(httpConfig) {
+            var token = localStorage.getItem(tokenName);
+            if (token && config.httpInterceptor) {
+              token = config.authHeader === 'Authorization' ? 'Bearer ' + token : token;
+              httpConfig.headers[config.authHeader] = token;
+            }
+            return httpConfig;
+          },
+          responseError: function(response) {
+            return $q.reject(response);
+          }
+        };
+      }]);
+    }]);
