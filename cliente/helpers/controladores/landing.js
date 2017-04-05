@@ -7,5 +7,9 @@ angular.module('sketch')
     .when('/registro', {
       templateUrl: '/views/plantillas/registro.html',
       controller: 'ctrlRegistro'
+   })
+    .when('/inicio', {
+      templateUrl: '/views/plantillas/inicio.html',
+      controller: 'ctrlRegistro'
    });
 }]);

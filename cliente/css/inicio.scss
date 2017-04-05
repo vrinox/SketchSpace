@@ -1,0 +1,53 @@
+md-content[landing] {
+	overflow: auto !important;
+}
+div[titulo-trabajo]{
+	width: 90%;
+	border-bottom: 1px solid white;
+	padding: 10px 0px;
+	font-size: 25px;
+	    margin: 90px auto 0 auto;
+	h4{
+		margin:0;
+	}
+}
+div[contenedor-trabajo]{
+	width: 90%;
+	margin: 0px auto;
+	div[row]{
+		float: left;
+		width: calc(50% - 20px);
+		margin-left: 10px;
+		margin-bottom: 10px;
+		@media screen and (max-width: 720px) {
+			width: 100% !important;;
+			margin: 0px;
+		}
+	}
+	div[trabajo-descripcion]{
+		border: 1px solid silver; 
+		margin-top: 10px;
+		padding: 0px 5px;
+		background-color: rgba(0,0,0,0.5);
+		border-radius: 3px;
+    	@include BoxShadowHelper(3);
+		div[titulo]{
+			font-size: 20px;
+			padding: 15px 5px;
+			background-color: rgba(0,155,219,0.6);
+			width:100%;
+			margin-left: -5px;
+			border-radius: 3px;
+
+		}
+		.md-raised{
+			float: right;
+			color: white;
+		}
+		div[clear]{
+			width: 100%;
+			clear: both;
+		}
+	}
+}
+
