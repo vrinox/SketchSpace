@@ -2,7 +2,7 @@
   <div cabecera class="md-primary">
     Inicio Sesion
   </div>
-  <form name="formInicio" ng-submit="login.login()">
+  <form name="formInicio" ng-submit="login()" method="post">
     <md-input-container md-no-float class="md-block">
       <label>Nombre o Email</label>
       <input required name="nombre" minlength="5"  ng-model="nombre">
@@ -19,9 +19,11 @@
         <div ng-message="required">Este campo es requerido</div>
       </div>
     </md-input-container>
-    <section layout="row"  layout-align="center" >
-      <md-button class="md-raised md-primary" type="submit">Iniciar sesion</md-button>
-      <md-button class="md-raised md-primary" ui-sref="frontPage.main">Volver</md-button>
+    <section   layout-align="center" >
+      <button login class="md-raised md-primary" type="submit">Iniciar sesion</button>
+      <div divider></div>
+      <button login class="google" type="button" ng-click="authenticate('google')"><i class="ion-social-google"></i> Sign in with Google</button>
+
     </section>
   </form>
 </div>

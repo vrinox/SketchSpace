@@ -1,3 +1,14 @@
+var service = require('../tokenAut');
+var servidor = require('../../servidor/servidor');
+//uso de hilos de ejecucion
+var events  = require('events');
+var channel = new events.EventEmitter();
+
+channel.on('armarSesion', function(perfil){
+  servidor.addUsuario(perfil);
+  servidor.mostrarListaUsuarios();
+});
+
 module.exports = function(app){
   //guardar registro
   app.post('/api/autenticar/', function(req, res) {
@@ -9,10 +20,11 @@ module.exports = function(app){
       }
     });
     if(usuario.clave === req.body.clave){
+      usuario.token = service.createToken(usuario);
+      channel.emit('armarSesion',usuario);
       return res
           .status(200)
-          .send({token: service.createToken(user)});
+          .send(usuario);
     }
-
   });
 };

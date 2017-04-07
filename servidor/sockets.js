@@ -1,12 +1,14 @@
 var socketio = require('socket.io');
 var servidor = require('./servidor');
-var dateParser = require('./dateParser');
+var moment = require('moment');
 var plugAssembler = require('./plug');
 
-function init(app) {
-	var io = socketio(app);
+function init(server) {
+	var io = socketio(server,{'transports': ['websocket', 'polling']});
+	io.set('transports', ['websocket', 'flashsocket', 'htmlfile', 'xhr-polling', 'jsonp-polling']);
 	io.use(function(socket, next){
 	    servidor.mostrarListaUsuarios();
+			console.log();
 	    var usuario = servidor.buscarUsuario(socket.handshake.query.id);
 	    var error;
 	    if(!usuario){
@@ -34,6 +36,7 @@ function init(app) {
 	});
 
 	io.sockets.on('connection',function(socket){
+		socket.emit('init',{texto:"socket inicializado"});
 	  //-----------inicio SESSION--- ------------------------
 	  socket.on('session',function(data){
 	    if(data.texto=='cerrar')

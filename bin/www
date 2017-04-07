@@ -28,10 +28,8 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-//---------------------- Socket.io -------------------------
-//TODO:BUG instalar socket io
-//var io = require('../servidor/sockets')(server);
 
+var io = require('../servidor/sockets')(server);
 /**
  * Normalize a port into a number, string, or false.
  */

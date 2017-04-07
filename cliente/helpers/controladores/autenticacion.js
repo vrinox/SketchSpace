@@ -1,19 +1,15 @@
 angular
     .module("sketch")
     .controller("ctrlRegistro", SignUpController)
-    .controller("ctrlInicio", LoginController)
-    .controller("LogoutController", LogoutController);
+    .controller("ctrlInicio", LoginController);
 
-function SignUpController($auth, $location) {
-    var vm = this;
-    this.signup = function() {
+function SignUpController($auth, $location,$scope,$sesion) {
+    $scope.signup = function() {
         $auth.signup({
-            nombre: vm.email,
-            clave: vm.password
+            nombre: $scope.email,
+            clave: $scope.password
         })
-        .then(function() {
-            // Si se ha registrado correctamente,
-            // Podemos redirigirle a otra parte
+        .then(function(response) {
             $location.path("/trabajos");
         })
         .catch(function(response) {
@@ -23,16 +19,14 @@ function SignUpController($auth, $location) {
     };
 }
 
-function LoginController($auth, $location) {
-    var vm = this;
-    this.login = function(){
+function LoginController($auth, $location,$scope,$sesion) {
+    $scope.login = function(){
         $auth.login({
-            nombre: vm.nombre,
-            clave: vm.clave
+            nombre: $scope.nombre,
+            clave: $scope.clave
         })
-        .then(function(){
-            // Si se ha logueado correctamente, lo tratamos aquí.
-            // Podemos también redirigirle a una ruta
+        .then(function(response){
+            $sesion.crear(response.data).conectar();
             $location.path("/trabajos");
         })
         .catch(function(response){
@@ -40,12 +34,7 @@ function LoginController($auth, $location) {
             console.error(new Error("error de autenticacion"));
         });
     };
-}
-
-function LogoutController($auth, $location) {
-    $auth.logout()
-        .then(function() {
-            // Desconectamos al usuario y lo redirijimos
-            $location.path("/");
-        });
+    $scope.authenticate = function(provider) {
+      $auth.authenticate(provider);
+    };
 }
