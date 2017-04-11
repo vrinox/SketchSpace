@@ -1,12 +1,12 @@
 angular.module('sketch')
 .controller('ctrlLanding', ['$scope','$auth','$location','$sesion', function ($scope,$auth,$location,$sesion) {
-  $scope.trabajos = [
+  $scope.trabajos1 = [
     {
       "id":01,
       "usuario":{
-        "nombre":"javier aranguren",
-        "avatar":"../../img/ja.jpg",
-        "puntuacion":3
+        "nombre":"Matthew",
+        "avatar":"../../img/matthew.png",
+        "puntuacion":5
       },
       "muestra":"../../img/sample-1.jpg",
       "titulo":"Redaccion de Articulos y mucho mas",
@@ -18,12 +18,13 @@ angular.module('sketch')
         }
       ],
       "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.",
-    },{
+    }];
+    $scope.trabajos2 = [{
       "id":02,
       "usuario":{
-        "nombre":"javier aranguren",
-        "avatar":"../../img/ja.jpg",
-        "puntuacion":3
+        "nombre":"Kristy",
+        "avatar":"../../img/kristy.png",
+        "puntuacion":2
       },
       "muestra":"../../img/parallax2.jpg",
       "titulo":"Diseño de interiores",
@@ -41,6 +42,7 @@ angular.module('sketch')
       "descripcion":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.",
     }
   ];
+
   $scope.rango = function(numero){
     var estrellas = [];
     for(var x = 0;x < numero;x++){

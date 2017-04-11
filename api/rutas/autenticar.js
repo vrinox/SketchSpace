@@ -12,7 +12,7 @@ channel.on('armarSesion', function(perfil){
 module.exports = function(app){
   //guardar registro
   app.post('/api/autenticar/', function(req, res) {
-    var users = [{"id":1,"nombre":"victor","clave":"1234"}];
+    var users = [{"id":1,"nombre":"matthew","clave":"1234"}];
     var usuario;
     users.forEach(function(each){
       if(each.nombre === req.body.nombre){

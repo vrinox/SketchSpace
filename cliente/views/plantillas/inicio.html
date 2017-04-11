@@ -28,7 +28,7 @@
   <div contenedor-trabajo>
     <div row>
       <!-- Plantilla trabajo-->
-      <div trabajo-descripcion ng-repeat="trabajo in trabajos">
+      <div trabajo-descripcion ng-repeat="trabajo in trabajos1">
         <div contenedor-avatar>
           <div avatar>
             <img src="{{trabajo.usuario.avatar}}" alt="">
@@ -65,10 +65,40 @@
     </div>
 
     <div row>
+      <!-- Plantilla trabajo-->
+      <div trabajo-descripcion ng-repeat="trabajo in trabajos2">
+        <div contenedor-avatar>
+          <div avatar>
+            <img src="{{trabajo.usuario.avatar}}" alt="">
+          </div>
+          <h4>{{trabajo.usuario.nombre}}</h4>
+          <h6><i class="material-icons" ng-repeat="estrella in rango(trabajo.usuario.puntuacion)">star</i></h6>
+        </div>
+        <div imagen ui-sref='trabajo({id: trabajo.id})'>
+          <img src="{{trabajo.muestra}}" alt="#">
+          <div titulo-img>
+            {{trabajo.titulo}}
+          </div>
+        </div>
+        <!-- chips categorias -->
+        <div titulo>
+          <md-chips ng-model="trabajo.categorias" name="categorias" readonly="true" md-removable="false" md-max-chips="5" >
+            <md-chip-template>
+              <i class="material-icons">{{$chip.icono}}</i>
+              <strong>{{$chip.nombre}}</strong>
+            </md-chip-template>
+          </md-chips>
+        </div>
+        <p>
+          {{trabajo.descripcion}}
+        </p>
+        <div acciones>
+          <i class="material-icons">favorite</i>
+        </div>
+        <div clear></div>
+      </div>
 
-    </div>
-    <div row>
-
+        <!--fin Plantilla trabajo-->
     </div>
   </div>
 </md-content>
