@@ -29,6 +29,8 @@ angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.
       }
       return deferred.promise;
     }];
+
+  //------------------------ Rutas ---------------------------------------------------
   $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('frontPage', {
@@ -66,6 +68,14 @@ angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.
       resolve: {
         loginRequired: loginRequired
       }
+    })
+    .state('trabajo',{
+      url:'/trabajo?id',
+      templateUrl: '/views/plantillas/trabajo.html',
+      controller: 'ctrlTrabajo',
+      // resolve: {
+      //   loginRequired: loginRequired
+      // }
     });
     $mdThemingProvider.theme('default')
           .primaryPalette('cyan')

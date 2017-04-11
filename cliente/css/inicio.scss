@@ -2,7 +2,7 @@ md-content[landing] {
 	overflow: auto !important;
 }
 div[titulo-trabajo]{
-	width: 90%;
+	width: 96%;
 	border-bottom: 1px solid white;
 	padding: 10px 0px;
 	font-size: 25px;
@@ -12,11 +12,11 @@ div[titulo-trabajo]{
 	}
 }
 div[contenedor-trabajo]{
-	width: 90%;
+	width: 96%;
 	margin: 0px auto;
 	div[row]{
 		float: left;
-		width: calc(50% - 20px);
+		width: calc((100%/2) - 13px);
 		margin-left: 10px;
 		margin-bottom: 10px;
 		@media screen and (max-width: 720px) {
@@ -31,18 +31,94 @@ div[contenedor-trabajo]{
 		background-color: rgba(0,0,0,0.5);
 		border-radius: 3px;
     	@include BoxShadowHelper(3);
-		div[titulo]{
+    	div[contenedor-avatar]{
+    		width: calc(100% + 10px);
+    		margin-left: -5px;
+    		height: 60px;
+			background-color: rgba(0,155,219,0.6);
+    		div[avatar]{
+    			width: 50px;
+    			height: 50px;
+    			border-radius: 100px;
+    			background: white;
+    			margin: 5px 0 0 5px;
+    			position: absolute;
+    			overflow: hidden;
+    			img{
+    				width: 100%;
+    				height: 100%;
+    			}
+    		}
+    		h4{
+    			position:absolute;
+    			margin-left: 62px;
+    			font-size: 15px;
+					margin-top: 12px;
+    		}
+				h6{
+					position: absolute;
+					margin-left: 60px;
+					margin-top: 35px;
+					i{
+						font-size: 15px;
+						color: #FFEB3B;
+					}
+				}
+    	}
+    	div[imagen]{
+    		width: calc(100% + 10px);
+    		height: 400px;
+    		margin-left: -5px;
+    		img{
+    			width: 100%;
+    			height: 100%;
+    		}
+    		div[titulo-img]{
+    			position: relative;
+			    margin-top: -50px;
+			    color: white;
+			    text-shadow: 1px 3px 3px black;
+			    font-weight: bold;
+			    padding: 5px 10px;
+			    background-color: rgba(0,0,0,0.5);
+			    padding: 10px;
+    		}
+
+    	}
+    	div[titulo]{
 			font-size: 20px;
-			padding: 15px 5px;
+			padding: 10px 5px;
 			background-color: rgba(0,155,219,0.6);
 			width:100%;
 			margin-left: -5px;
-			border-radius: 3px;
+			md-chip-template{
+			    i{
+			    	transform: translateY(3px);
+				    margin-right: 5px;
+				    padding: 5px;
+				    font-size: 20px;
+			    }
 
+			}
+			.md-chip-content{
+				margin-top: -3px;
+			}
 		}
-		.md-raised{
-			float: right;
-			color: white;
+		div[acciones]{
+			i{
+				float: right;
+				margin: 5px 20px 15px 0;
+				font-size: 25px;
+				cursor: pointer;
+				padding: 5px;
+				border: 1px solid transparent;
+				transition: all 0.3s ease-in-out;
+				color: #f44336;
+				&:hover{
+					border: 1px solid;
+					border-radius: 100px;
+				}
+			}
 		}
 		div[clear]{
 			width: 100%;

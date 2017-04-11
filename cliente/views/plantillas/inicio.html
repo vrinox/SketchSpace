@@ -27,65 +27,48 @@
   </div>
   <div contenedor-trabajo>
     <div row>
-      <div trabajo-descripcion>
+      <!-- Plantilla trabajo-->
+      <div trabajo-descripcion ng-repeat="trabajo in trabajos">
+        <div contenedor-avatar>
+          <div avatar>
+            <img src="{{trabajo.usuario.avatar}}" alt="">
+          </div>
+          <h4>{{trabajo.usuario.nombre}}</h4>
+          <h6><i class="material-icons" ng-repeat="estrella in rango(trabajo.usuario.puntuacion)">star</i></h6>
+        </div>
+        <div imagen ui-sref='trabajo({id: trabajo.id})'>
+          <img src="{{trabajo.muestra}}" alt="#">
+          <div titulo-img>
+            {{trabajo.titulo}}
+          </div>
+        </div>
+        <!-- chips categorias -->
         <div titulo>
-          Javier Aranguren
+          <md-chips ng-model="trabajo.categorias" name="categorias" readonly="true" md-removable="false" md-max-chips="5" >
+            <md-chip-template>
+              <i class="material-icons">{{$chip.icono}}</i>
+              <strong>{{$chip.nombre}}</strong>
+            </md-chip-template>
+          </md-chips>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
-          <br>
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
+          {{trabajo.descripcion}}
         </p>
-          <md-button class="md-raised md-primary">Aceptar</md-button>
+        <div acciones>
+          <i class="material-icons">favorite</i>
+        </div>
         <div clear></div>
       </div>
 
-      <div trabajo-descripcion>
-        <div titulo>
-          Victor Leon
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
-        </p>
-        <md-button class="md-raised md-primary">Aceptar</md-button>
-        <div clear></div>
-      </div>
+        <!--fin Plantilla trabajo-->
+
     </div>
 
     <div row>
-      <div trabajo-descripcion>
-        <div titulo>
-          Miguel Yepez
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
-        </p>
-        <md-button class="md-raised md-primary">Aceptar</md-button>
-        <div clear></div>
-      </div>
 
-      <div trabajo-descripcion>
-        <div titulo>
-          Jorge Sarmiento
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
-        </p>
-        <md-button class="md-raised md-primary">Aceptar</md-button>
-        <div clear></div>
-      </div>
+    </div>
+    <div row>
 
-      <div trabajo-descripcion>
-        <div titulo>
-          Javier Osma
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum tempore officiis aliquam deleniti labore itaque nihil voluptatem est culpa, molestiae, veritatis distinctio aut nam, ullam id quasi, corrupti officia numquam.
-        </p>
-        <md-button class="md-raised md-primary">Aceptar</md-button>
-        <div clear></div>
-      </div>
     </div>
   </div>
 </md-content>
