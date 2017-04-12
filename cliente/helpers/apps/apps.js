@@ -12,7 +12,7 @@ angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.
   var skipIfLoggedIn = ['$q', '$auth', function($q, $auth) {
 
       var deferred = $q.defer();
-      if ($auth.isAuthenticated()) {
+      if ($auth.isAuthenticated()){
         deferred.reject();
       } else {
         deferred.resolve();
@@ -47,18 +47,18 @@ angular.module('sketch', ['ngMaterial','ngMessages','ngRoute', 'ngResource','ui.
         templateUrl: '/views/plantillas/front-registro.html',
         controller: 'ctrlRegistro',
         controllerAs: 'registro',
-        resolve: {
-          skipIfLoggedIn: skipIfLoggedIn
-        }
+        //resolve: {
+        //  skipIfLoggedIn: skipIfLoggedIn
+        //}
       })
       .state('frontPage.inicio', {
         url: 'Autenticar',
         templateUrl: '/views/plantillas/front-inicio.html',
         controller: 'ctrlInicio',
         controllerAs: 'inicio',
-        resolve: {
-          skipIfLoggedIn: skipIfLoggedIn
-        }
+        //resolve: {
+        //  skipIfLoggedIn: skipIfLoggedIn
+        //}
       })
     //trabajos
     .state('trabajos',{

@@ -28,13 +28,14 @@
           <div avatar>
             <img src="{{trabajo.usuario.avatar}}" alt="">
           </div>
-          <h4>{{trabajo.usuario.nombre}}</h4>
+          <h4>{{trabajo.usuario.nombre}} </h4>
           <h6><i class="material-icons" ng-repeat="estrella in rango(trabajo.usuario.puntuacion)">star</i></h6>
         </div>
         <div imagen ui-sref='trabajo({id: trabajo.id})'>
           <img src="{{trabajo.muestra}}" alt="#">
           <div titulo-img>
             {{trabajo.titulo}}
+            <i class="material-icons">favorite</i>
           </div>
         </div>
         <!-- chips categorias -->
@@ -49,9 +50,6 @@
         <p>
           {{trabajo.descripcion}}
         </p>
-        <div acciones>
-          <i class="material-icons">favorite</i>
-        </div>
         <div clear></div>
       </div>
 
@@ -73,6 +71,7 @@
           <img src="{{trabajo.muestra}}" alt="#">
           <div titulo-img>
             {{trabajo.titulo}}
+            <i class="material-icons">favorite</i>
           </div>
         </div>
         <!-- chips categorias -->
@@ -87,9 +86,6 @@
         <p>
           {{trabajo.descripcion}}
         </p>
-        <div acciones>
-          <i class="material-icons">favorite</i>
-        </div>
         <div clear></div>
       </div>
 

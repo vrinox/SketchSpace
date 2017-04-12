@@ -41,7 +41,8 @@ div[contenedor-trabajo] {
         background: white;
         margin: 5px 0 0 5px;
         position: absolute;
-        overflow: hidden; }
+        overflow: hidden;
+        border: 2px solid white; }
         div[contenedor-trabajo] div[trabajo-descripcion] div[contenedor-avatar] div[avatar] img {
           width: 100%;
           height: 100%; }
@@ -73,31 +74,29 @@ div[contenedor-trabajo] {
         padding: 5px 10px;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px; }
-    div[contenedor-trabajo] div[trabajo-descripcion] div[titulo] {
-      font-size: 20px;
-      padding: 10px 5px;
-      background-color: rgba(0, 155, 219, 0.6);
-      width: 100%;
-      margin-left: -5px; }
-      div[contenedor-trabajo] div[trabajo-descripcion] div[titulo] md-chip-template i {
-        transform: translateY(3px);
-        margin-right: 5px;
-        padding: 5px;
-        font-size: 20px; }
-      div[contenedor-trabajo] div[trabajo-descripcion] div[titulo] .md-chip-content {
-        margin-top: -3px; }
-    div[contenedor-trabajo] div[trabajo-descripcion] div[acciones] i {
-      float: right;
-      margin: 5px 20px 15px 0;
-      font-size: 25px;
-      cursor: pointer;
-      padding: 5px;
-      border: 1px solid transparent;
-      transition: all 0.3s ease-in-out;
-      color: #f44336; }
-      div[contenedor-trabajo] div[trabajo-descripcion] div[acciones] i:hover {
-        border: 1px solid;
-        border-radius: 100px; }
+        div[contenedor-trabajo] div[trabajo-descripcion] div[imagen] div[titulo-img] i {
+          float: right;
+          margin: -10px 20px 15px 0;
+          font-size: 25px;
+          cursor: pointer;
+          padding: 5px;
+          border: 1px solid transparent;
+          transition: all 0.3s ease-out; }
+          div[contenedor-trabajo] div[trabajo-descripcion] div[imagen] div[titulo-img] i:hover {
+            transform: scale(1.2); }
+      div[contenedor-trabajo] div[trabajo-descripcion] div[imagen] div[titulo] {
+        font-size: 20px;
+        padding: 10px 5px;
+        background-color: rgba(0, 155, 219, 0.6);
+        width: 100%;
+        margin-left: -5px; }
+        div[contenedor-trabajo] div[trabajo-descripcion] div[imagen] div[titulo] md-chip-template i {
+          transform: translateY(3px);
+          margin-right: 5px;
+          padding: 5px;
+          font-size: 20px; }
+        div[contenedor-trabajo] div[trabajo-descripcion] div[imagen] div[titulo] .md-chip-content {
+          margin-top: -3px; }
     div[contenedor-trabajo] div[trabajo-descripcion] div[clear] {
       width: 100%;
       clear: both; }
@@ -266,7 +265,8 @@ header div[sociales] div[avatar] {
   margin: -7px 60px 0 0;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  position: relative; }
+  position: relative;
+  border: 2px solid white; }
   header div[sociales] div[avatar] img {
     width: 100%;
     height: 100%;
@@ -279,9 +279,10 @@ header div[sociales] div[avatar] {
     position: absolute;
     margin-left: -50px;
     margin-top: 2px;
-    z-index: -1;
-    transition: all 0.5 ease-in-out;
-    opacity: 0; }
+    transition: opacity 0.7s ease-out, box-shadow 0.3s ease-in, z-index 0.7s ease-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    z-index: -1; }
     header div[sociales] div[avatar] div[opciones] ul {
       background: rgba(0, 0, 0, 0.5);
       margin-top: -5px;
@@ -304,9 +305,10 @@ header div[sociales] div[avatar] {
           margin-right: 5px;
           margin-top: -10px; }
   header div[sociales] div[avatar]:hover div {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    opacity: 1;
-    z-index: 1; }
+    transition: opacity 0.3s ease-in, box-shadow 0.7s ease-out, z-index 0.7s ease-out;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    z-index: 1;
+    opacity: 1; }
 
 html, body {
   min-height: 100%; }
