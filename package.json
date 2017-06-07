@@ -1,10 +1,12 @@
 {
-  "name": "sketchspace",
+  "name": "SketchSpace",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "6.9.4"
   },
   "dependencies": {
     "angular": "1.5.10",
@@ -22,20 +24,21 @@
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "jwt-simple": "^0.5.1",
+    "leaflet": "^1.0.3",
     "moment": "^2.18.1",
     "morgan": "~1.7.0",
+    "multer": "^1.3.0",
+    "ng-file-upload": "^12.2.13",
+    "nodemailer": "^4.0.1",
+    "pg": "^4.5.6",
+    "pg-hstore": "^2.3.2",
     "satellizer": "^0.15.5",
+    "sequelize": "^3.12.2",
+    "sequelize-cli": "^2.1.0",
     "serve-favicon": "~2.3.2",
-    "socket.io": "^1.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vrinox/SketchSpace.git"
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3"
   },
   "author": "vrinox",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vrinox/SketchSpace/issues"
-  },
-  "homepage": "https://github.com/vrinox/SketchSpace#readme"
+  "license": "ISC"
 }
