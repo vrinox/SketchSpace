@@ -13,7 +13,7 @@
 }
 
 .main-nav{
-  background: transparent !important;
+  background: white !important;
   position: relative;
   z-index: 10;
   right: 0;
@@ -240,7 +240,7 @@ footer#footer{
 
 div.portada{
   width: 100%;
-  height: 400px;
+  height: 500px;
   border-bottom: 1px solid silver;
   background: url('../img/22.jpg');
 }
@@ -256,7 +256,7 @@ div.portada div.capa{
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
-  margin-top: -400px;
+  margin-top: -500px;
   position: relative;
 }
 
@@ -277,11 +277,7 @@ div.portada div.cont-avatar div.avatar{
   margin-left: 10px;
 }
 
-section.body{
-  height: 1500px;
-  background: white;
-  padding-top: 60px;
-}
+
 
 div.portada div.cont-avatar div.nom-per{
   margin: -80px 0 0 100px;
@@ -335,4 +331,447 @@ div.portada div.cont-avatar ul li:hover{
 div.portada div.cont-avatar ul li label{
   font-size: 10px;
   font-weight: normal;
+}
+
+div.por-abo{
+  width: 250px;
+  height: 40px;
+  float: right;
+  position: relative;
+}
+
+div.por-abo div{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  float: left;
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 47px;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+div.por-abo div:hover{
+  background: #464646;
+}
+
+div.portafolio{
+  background:  #1d71b8;
+}
+div.acercade{
+  background: #00a19a;
+}
+/*-------------------cuerpo portafolio---------------------*/
+.clear{
+  width: 100%;
+  clear: both;
+}
+
+section.body{
+  width: calc(100% - 40px);
+  height: auto;
+  background: white;
+  padding-top: 60px;
+  margin: 0 20px;
+}
+
+section.body h1{
+  color: #1d71b8;
+  margin: -20px 0 20px 0;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  text-indent: 20px;
+}
+
+article.work{
+      width: calc((100% - 40px)/4);
+  height: 300px;
+  position: relative;
+  float: left;
+  margin: 0px 5px 10px 5px;
+  transition: all 0.3s;
+}
+
+article.work div.precio{
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #464646;
+  color: white;
+}
+
+article.work:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+section.img{
+  width: 100%;
+  height: 100%;
+  background: grey;
+  padding: 0;
+}
+
+section.img img{
+width: 100%;
+height: 100%;
+}
+
+section.info{
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.2);
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+div.star{
+  width: 100%;
+  height: 50px;
+  margin-left: 5px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+div.star i{
+  margin-top: 10px;
+  transition: all 0.2s linear;
+}
+
+div.star i.fa-star:hover{
+  color: yellow;
+  cursor: pointer;
+}
+
+.right{
+  float: right;
+  margin-right: 10px;
+}
+
+.right i:hover{
+  cursor: pointer;
+  color: rgb(43, 84, 138);
+}
+
+.right small{
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/*----------------------acerca de-------------------------*/
+.cont-acerca{
+  border-left: 1px solid silver; 
+  height: auto;
+  box-shadow: -5px 0 5px -5px rgba(0,0,0,0.5);
+  margin-bottom: 60px;
+  padding: 10px;
+  padding-left: 20px
+  /*
+  box-shadow: 5px 0 5px -5px #333; right
+  box-shadow: 0 -5px 5px -5px #333; top
+  box-shadow: -5px 0 5px -5px rgba(0,0,0,0.5); left
+  box-shadow: 0 5px 5px -5px #333; bottom
+  */
+}
+
+.cont-acerca p{
+  font-size: 16px;
+  color: grey;
+}
+
+div.experiencia{
+  margin: 20px 0;
+}
+
+div.experiencia h5{
+  font-weight: bold;
+}
+
+div.experiencia ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+div.experiencia ul li{
+  display: inline-block;
+  font-size: 30px;
+  padding: 0 20px;
+  color: grey;
+  font-weight: bold;
+  border-right: 1px solid silver;
+}
+
+div.experiencia ul li:nth-child(1){
+  border-bottom: 2px solid white;
+}
+
+div.experiencia ul li:last-child{
+  border-right: none;
+}
+
+div.experiencia ul li:hover{
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+div.experiencia ul li label{
+  font-size: 12px;
+  font-weight: normal;
+  color: silver;
+  margin-top: 10px;
+}
+
+div.mi-star{
+  margin-top: 20px;
+}
+
+div.mi-star button{
+  position: absolute;
+  transform: translate(260px,-55px);
+  padding: 8px 12px;
+  background: #00a19a;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+div.mi-star button:hover{
+  background: #1d71b8;
+}
+
+div.mi-star h6, div.contactame h6{
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+div.cont-star i{
+  font-size: 25px;
+  margin-right: 10px; 
+  color: #1d71b8;
+}
+
+div.redes i{
+  font-size: 14px;
+  color: grey;
+  transition: all 0.3s linear;
+}
+f
+div.redes i:hover{
+  color: #00a19a;
+  transform: scale(1.1);
+}
+
+/*-----------ver concursos-----------*/
+
+h1.titulo-concurso{
+  width: calc(100% + 40px) !important;
+  text-align: left !important;
+  background: #f5f5f5;
+  margin-left: -20px !important;
+  padding: 15px ;
+  text-decoration: none !important;
+  margin-top: -60px !important;
+}
+
+div.filtros{
+  margin-bottom: 10px;
+}
+
+div.filtros div{
+  padding: 5px !important;
+}
+
+div.filtros select{
+  padding: 10px;
+  background: white;
+  border: 1px solid #00a19a;
+  color:#00a19a;
+}
+
+article.w-concurso{
+  width: calc((100% - 30px)/3) !important;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+article.w-concurso section.info{
+  height: 100px;
+}
+
+section.capa-info{
+  width: 95%;
+  height: 280px;
+  background: #1d71b8;
+  position: absolute;
+  padding: 0;
+  margin: 5px auto;
+  margin-left: 2.5%;
+  overflow-y: auto;
+}
+
+article.w-concurso:hover section.capa-info{
+  margin-top: -290px;
+}
+
+section.capa-info h5{
+  font-weight: bold;
+  color:white;
+  padding: 15px 10px;
+  border-bottom: 1px solid white;
+  margin-top: 0;
+}
+
+section.capa-info p{
+  padding: 0px 10px 10px 10px;
+  color:white;
+  font-size: 12px;
+}
+
+
+section.capa-info div.marcas{
+  padding: 10px;
+  background: white;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+section.capa-info div.marcas div.autor{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+section.capa-info div.marcas label{
+  background: white;
+  border: 1px solid silver;
+  color: grey;
+  padding: 0 5px;
+  font-weight: normal;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+section.capa-info div.marcas label.garantizado{
+  border-color: #00a19a;
+  color: #00a19a;
+}
+
+/*-----------modal concurso-------------------*/
+div.completo{
+  width: calc(100% + 15px);
+  margin: 0 0 1px -15px;
+}
+
+div.contenido-modal{
+  border-radius: 0px;
+  width: 100%;
+  border: none;
+  height: 100%;
+  min-height: 653px;
+  padding-left: 15px;
+}
+
+div.contenido-modal section.info{
+  bottom: 0 !important;
+}
+
+button.close{
+  padding: 5px 10px;
+  border: 0;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  background: rgba(255,0,0,0.6);
+  z-index: 200;
+  color: white;
+  opacity: 1;
+}
+
+div.titulo-modal{
+  background: #f5f5f5;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  padding: 15px 15px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+
+div.titulo-modal h3{
+  font-weight: bold;
+  color: #1d71b8;
+  font-size: 20px;
+  text-indent: 5px;
+}
+
+div.precio-modal{
+  float: right;
+  color: grey;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+div.titulo-modal h6{
+  text-indent: 3px;
+}
+
+
+div.titulo-modal h6 label{
+  border: 1px solid #00a19a;
+  color: #00a19a;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+div.titulo-modal h6 small{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+div.titulo-modal h6 div.revisar{
+  float: right;
+  margin-right: 10px;
+}
+
+div.menu-modal{
+  margin-top: -12px;
+}
+
+div.m2{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div.modal-img img{
+  width: 80%;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 8%;
+}
+
+div.modal-info-img{
+  box-shadow: -5px 0 5px -5px rgba(0,0,0,0.5);
+  height: 653px;
+}
+
+div.info-titulo{
+  border-bottom: 1px solid silver;
+  padding: 10px 0 10px 0;
+}
+
+div.info-titulo:nth-child(2){
+  text-align: center;
 }

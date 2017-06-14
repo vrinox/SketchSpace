@@ -1,0 +1,286 @@
+ <link rel="stylesheet" href="css/bootstrap.css">
+ <style>
+     /* crazy batman newspaper spinny thing */
+ .rotate {
+    transform:rotate(180deg);
+    transition:all 0.5s;
+}
+.rotate.in {
+    transform:rotate(1800deg);
+    transition:all 1.5s;
+}
+
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+ </style>
+<div id="main">
+ <h2>Stacked Bootstrap Modal Example.</h2>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+<p> lorem ipsum </p>
+ <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                	<h4 class="modal-title">Modal 1</h4>
+
+            </div>
+            <div class="container"></div>
+            <div class="modal-body">Content for the dialog / modal goes here.
+                <br>
+                <br>
+                <br>
+                <p>more content</p>
+                <br>
+                <br>
+                <br>	<a data-toggle="modal" href="#myModal2" class="btn btn-primary">Launch modal</a>
+
+            </div>
+            <div class="modal-footer">	<a href="#" data-dismiss="modal" class="btn">Close</a>
+	<a href="#" class="btn btn-primary">Save changes</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade rotate" id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                	<h4 class="modal-title">Modal 2</h4>
+
+            </div>
+            <div class="container"></div>
+            <div class="modal-body">Content for the dialog / modal goes here.
+                <br>
+                <br>
+                <p>come content</p>
+                <br>
+                <br>
+                <br>	<a data-toggle="modal" href="#myModal3" class="btn btn-primary">Launch modal</a>
+
+            </div>
+            <div class="modal-footer">	<a href="#" data-dismiss="modal" class="btn">Close</a>
+	<a href="#" class="btn btn-primary">Save changes</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                	<h4 class="modal-title">Modal 3</h4>
+
+            </div>
+            <div class="container"></div>
+            <div class="modal-body">Content for the dialog / modal goes here.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>	<a data-toggle="modal" href="#myModal4" class="btn btn-primary">Launch modal</a>
+
+            </div>
+            <div class="modal-footer">	<a href="#" data-dismiss="modal" class="btn">Close</a>
+	<a href="#" class="btn btn-primary">Save changes</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal4">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                	<h4 class="modal-title">Modal 4</h4>
+
+            </div>
+            <div class="container"></div>
+            <div class="modal-body">Content for the dialog / modal goes here.</div>
+            <div class="modal-footer">	<a href="#" data-dismiss="modal" class="btn">Close</a>
+	<a href="#" class="btn btn-primary">Save changes</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">Sidenav Push(off-canvas)</span>
+
+
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+    $('#openBtn').click(function () {
+        $('#myModal').modal()
+    });
+
+    $('.modal')
+        .on({
+            'show.bs.modal': function() {
+                var idx = $('.modal:visible').length;
+                $(this).css('z-index', 1040 + (10 * idx));
+            },
+            'shown.bs.modal': function() {
+                var idx = ($('.modal:visible').length) - 1; // raise backdrop after animation.
+                $('.modal-backdrop').not('.stacked')
+                .css('z-index', 1039 + (10 * idx))
+                .addClass('stacked');
+            },
+            'hidden.bs.modal': function() {
+                if ($('.modal:visible').length > 0) {
+                    // restore the modal-open class to the body element, so that scrolling works
+                    // properly after de-stacking a modal.
+                    setTimeout(function() {
+                        $(document.body).addClass('modal-open');
+                    }, 0);
+                }
+            }
+        });
+    });
+
+/* Sidenav Push Content*/
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+
+// /* Set the width of the side navigation to 250px  Sidenav Overlay Example*/
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "250px";
+// }
+
+// /* Set the width of the side navigation to 0 */
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+// }
+
+// /* Sidenav Push Content w/ opacity*/
+// /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "250px";
+//     document.getElementById("main").style.marginLeft = "250px";
+//     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+// }
+
+// /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+//     document.getElementById("main").style.marginLeft = "0";
+//     document.body.style.backgroundColor = "white";
+// }
+
+
+// /* Sidenav Full-width */
+// /* Open the sidenav */
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "100%";
+// }
+
+// /* Close/hide the sidenav */
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+// }
+
+//  Sidenav without Animation 
+// /* Open the sidenav */
+// function openNav() {
+//     document.getElementById("mySidenav").style.display = "block";
+// }
+
+// /* Close/hide the sidenav */
+// function closeNav() {
+//     document.getElementById("mySidenav").style.display = "none";
+// }
+
+</script>

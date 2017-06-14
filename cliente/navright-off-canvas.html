@@ -1,0 +1,138 @@
+    <!-- Styles -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <style>
+        html, body {
+  height:100%;
+}
+body     {
+  font-size:62.5%;
+  overflow:hidden;
+}
+
+#site-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    height: 5000px; /* Temp: Simulates a tall page. */
+}
+
+#site-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+
+    padding: 5% 0; /* Temp: Just spacing. */
+}
+
+#site-menu {
+    width: 30em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -30em;
+    background: #428bca;
+    padding: 15px;
+}
+
+
+
+#site-wrapper.show-nav #site-canvas {
+    -webkit-transform: translateX(-30em);
+    transform: translateX(-30em);
+}
+
+a.toggle-nav {position: absolute; top:0; right:0; font-size:2em; }
+
+/* Better Performing Method */
+#site-canvas {
+    -webkit-transform: translate3d(0);
+    transform: translate3d(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.show-nav #site-canvas {
+    -webkit-transform: translate3d(30em);  
+    transform: translate3d(30em);  
+}
+
+
+    </style>
+ <div id="site-wrapper">
+
+        <div id="site-canvas">
+<a href="#" class="toggle-nav btn btn-lg" id="big-sexy"><i class="fa fa-bars"></i> </a>
+            
+
+            <div id="site-menu">
+              
+   
+                <h2>My Menu</h1>
+                <p class="lead">Put any HTML you want here.</p>
+                <p>Style it however you want.</p>
+                <ul>
+                    <li>Free to scroll up and down</li>
+                    <li>But not left and write</li>
+                </ul>
+             </div>
+          <div class="container">
+           <div class="row">
+            <div class="col-md-4">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, dui ac laoreet accumsan, sem nisi consectetur quam, at facilisis ipsum justo sit amet elit. Duis vehicula turpis vel velit laoreet, eu faucibus nisi sodales. Duis auctor, sem at ultrices sollicitudin, purus orci rhoncus velit, id euismod elit mi eu neque. Mauris faucibus sem et magna congue, a feugiat mauris auctor. Suspendisse pellentesque id erat eget mattis. Nullam porta sapien metus, quis imperdiet libero rhoncus faucibus. Donec lacinia vel neque vel convallis. Suspendisse non odio posuere, elementum odio at, blandit orci. Sed congue lorem ac dolor gravida, a consectetur nunc aliquet. Donec dictum felis mi. Etiam nisi ante, facilisis vel ligula ac, ultrices iaculis justo. Integer imperdiet eleifend ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin risus non tristique facilisis. Maecenas sollicitudin rhoncus lacus, a bibendum arcu venenatis vel. Nunc suscipit ante ac augue rutrum, a viverra ante rutrum.</p>
+             </div>
+             
+                         <div class="col-md-4">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, dui ac laoreet accumsan, sem nisi consectetur quam, at facilisis ipsum justo sit amet elit. Duis vehicula turpis vel velit laoreet, eu faucibus nisi sodales. Duis auctor, sem at ultrices sollicitudin, purus orci rhoncus velit, id euismod elit mi eu neque. Mauris faucibus sem et magna congue, a feugiat mauris auctor. Suspendisse pellentesque id erat eget mattis. Nullam porta sapien metus, quis imperdiet libero rhoncus faucibus. Donec lacinia vel neque vel convallis. Suspendisse non odio posuere, elementum odio at, blandit orci. Sed congue lorem ac dolor gravida, a consectetur nunc aliquet. Donec dictum felis mi. Etiam nisi ante, facilisis vel ligula ac, ultrices iaculis justo. Integer imperdiet eleifend ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin risus non tristique facilisis. Maecenas sollicitudin rhoncus lacus, a bibendum arcu venenatis vel. Nunc suscipit ante ac augue rutrum, a viverra ante rutrum.</p>
+             </div>
+             
+                         <div class="col-md-4">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, dui ac laoreet accumsan, sem nisi consectetur quam, at facilisis ipsum justo sit amet elit. Duis vehicula turpis vel velit laoreet, eu faucibus nisi sodales. Duis auctor, sem at ultrices sollicitudin, purus orci rhoncus velit, id euismod elit mi eu neque. Mauris faucibus sem et magna congue, a feugiat mauris auctor. Suspendisse pellentesque id erat eget mattis. Nullam porta sapien metus, quis imperdiet libero rhoncus faucibus. Donec lacinia vel neque vel convallis. Suspendisse non odio posuere, elementum odio at, blandit orci. Sed congue lorem ac dolor gravida, a consectetur nunc aliquet. Donec dictum felis mi. Etiam nisi ante, facilisis vel ligula ac, ultrices iaculis justo. Integer imperdiet eleifend ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin risus non tristique facilisis. Maecenas sollicitudin rhoncus lacus, a bibendum arcu venenatis vel. Nunc suscipit ante ac augue rutrum, a viverra ante rutrum.</p>
+             </div>
+          </div>
+          </div>
+
+       </div><!-- #site-canvas -->
+
+    </div><!-- #site-wrapper> -->
+
+    <script>
+        $(function() {
+    $('.toggle-nav').click(function() {
+        // Calling a function in case you want to expand upon this.
+        toggleNav();
+    });
+});
+
+
+/*========================================
+=            CUSTOM FUNCTIONS            =
+========================================*/
+function toggleNav() {
+    if ($('#site-wrapper').hasClass('show-nav')) {
+        // Do things on Nav Close
+        $('#site-wrapper').removeClass('show-nav');
+    } else {
+        // Do things on Nav Open
+        $('#site-wrapper').addClass('show-nav');
+    }
+
+    //$('#site-wrapper').toggleClass('show-nav');
+}
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+        if ($('#site-wrapper').hasClass('show-nav')) {
+            // Assuming you used the function I made from the demo
+            toggleNav();
+        }
+    } 
+});
+    </script>

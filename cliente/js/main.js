@@ -17,10 +17,10 @@ jQuery(function($) {
 	//Scroll Menu
 	$(window).on('scroll', function(){
 		if( $(window).scrollTop()>400){
-			//$('.main-nav').addClass('navbar-fixed-top');
+			$('.main-nav').addClass('navbar-fixed-top');
 			$('.main-nav').css('border-bottom','1px solid rgb(21,206,196)');
 		} else {
-			//$('.main-nav').removeClass('navbar-fixed-top');
+			$('.main-nav').removeClass('navbar-fixed-top');
 			$('.main-nav').css('border-bottom','none');
 		}
 	});
@@ -171,8 +171,8 @@ jQuery(function($) {
 	/*----------------------------------------------------*/
 	
 	$("html").niceScroll({
-		scrollspeed: 100,
-		mousescrollstep: 38,
+		scrollspeed: 10,
+		mousescrollstep: 0,
 		cursorwidth: 8,
 		cursorborder: 0,
 		cursorcolor: 'rgb(2,206,196)',
@@ -181,4 +181,36 @@ jQuery(function($) {
 		horizrailenabled: false,
 		cursorborderradius: 0,
 	});
-		
+	
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
+$(document).ready(function () {
+    $('#openBtn').click(function () {
+        $('#myModal').modal()
+    });
+
+    $('.modal')
+        .on({
+            'show.bs.modal': function() {
+                var idx = $('.modal:visible').length;
+                $(this).css('z-index', 1040 + (10 * idx));
+            },
+            'shown.bs.modal': function() {
+                var idx = ($('.modal:visible').length) - 1; // raise backdrop after animation.
+                $('.modal-backdrop').not('.stacked')
+                .css('z-index', 1039 + (10 * idx))
+                .addClass('stacked');
+            },
+            'hidden.bs.modal': function() {
+                if ($('.modal:visible').length > 0) {
+                    // restore the modal-open class to the body element, so that scrolling works
+                    // properly after de-stacking a modal.
+                    setTimeout(function() {
+                        $(document.body).addClass('modal-open');
+                    }, 0);
+                }
+            }
+        });
+    });
